@@ -99,4 +99,27 @@ src -> user -> entitis ->
 --------------------------------------------------------------------------
 00 : 39 : 29
 
+---------------------------------------------------------------------------- Lesson 5
+registration users
+https://youtu.be/PWWz47GtGKo?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
+
+npm i --save class-validator class-transformer
+
+
+----------------------------------------------------------------------------
+00 : 00 : 00
+
+---------------------------------------------------------------------------- Lesson 6
+authentication
+
+
+
+
+npm install --save @nestjs/passport passport passport-local
+npm install --save-dev @types/passport-local
+
+
+---------------------------------------------------------------------------
+00 : 08 : 55
+
 
