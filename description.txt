@@ -1,0 +1,102 @@
+----------------------------------------------------------------------  Lesson - 1
+https://youtu.be/VN7mUuPfeXc?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
+
+-----------------------------------
+00 : 00 : 00
+
+--------------------------------------------------------------------- Lesson - 2
+
+
+
+https://youtu.be/P0STc15wFa8?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
+
+node.js
+nest.js
+
+npm i -g @nestjs/cli
+nest new  .
+
+Старт проекту nestjs 
+npm run start:dev
+
+localhost:3001
+
+main.ts -> app.module.ts -> app.controller.ts -> app.service.ts
+
+
+---------------------------------------------------------------------
+00 : 12 : 12
+
+------------------------------------------------------------------------- Lesson - 3
+
+https://youtu.be/QKsI0-3gv54?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
+
+new modules: 
+user
+transactions
+categories
+auntefication
+
+...........................................
+
+    створюємо модуль для Юзера
+nest g resource user
+
+...........................................
+
+
+обираємо --- REST API
+
+CRUDS ? обираємо --- Y
+
+
+Dto - модель типізації параметрів
+
+entities -> user.entitiy.ts --- таблиця у базі данних
+
+
+------------
+    створюємо модуль для Категорій
+nest g resource category --no-spec ( без додавання тестів )
+------------
+
+------------
+створюємо модуль для Аутентифікації
+nest g resource auth --no-spec ( без додавання тестів )
+------------
+
+------------
+створюємо модуль для Транзакцій
+nest g resource transaction --no-spec ( без додавання тестів )
+------------
+
+
+-------------------------------------------------------------------------
+00 : 08 : 25
+
+
+-------------------------------------------------------------------------- Lesson 4
+https://youtu.be/iqdMcTN9qck?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
+
+instal postgresql   --- pgAdmin4 --- login --- password
+
+database -> create database
+
+підключення до бази данних
+
+
+npm i --save @nestjs/config
+
+
+npm install --save @nestjs/typeorm typeorm pg
+
+
+Створення entities :
+
+src -> user -> entitis -> 
+
+
+--------------------------------------------------------------------------
+00 : 39 : 29
+
+
