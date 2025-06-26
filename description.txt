@@ -105,6 +105,17 @@ https://youtu.be/PWWz47GtGKo?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
 
 npm i --save class-validator class-transformer
 
+Pype - проміжна функція перед виконанням запиту
+
+nest - сервер
+typeOrm - зв'язок між Базою данних  та Сервером
+PostgresSql - База данних
+
+argon2 - хешування данних
+
+npm i argon2
+
+
 
 ----------------------------------------------------------------------------
 00 : 00 : 00
@@ -119,7 +130,8 @@ npm install --save @nestjs/passport passport passport-local
 npm install --save-dev @types/passport-local
 
 
+
 ---------------------------------------------------------------------------
-00 : 08 : 55
+00 : 04 : 58
 
 
