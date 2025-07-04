@@ -166,3 +166,32 @@ https://youtu.be/N7mOLvEpGHU?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
 00 : 23 : 45
 
 
+------------------------------------------------------------------------- Lesson 10
+Frontend
+
+https://youtu.be/Wk2I17jgSUw?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
+
+https://vite.dev/
+
+# npm 7+, extra double-dash is needed:
+
+client
+
+npm create vite@latest ./
+--- in React
+--- in TypeScript
+
+npm install
+
+dell app.css
+
+https://tailwindcss.com/
+
+.....................................
+npm run dev
+
+
+
+
+-------------------------------------------------------------------------
+00 : 02 : 01

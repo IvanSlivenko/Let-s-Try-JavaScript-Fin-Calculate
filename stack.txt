@@ -1,2 +1,5 @@
 node.js
 nest.js
+
+vite.dev
+tailwindcss
