@@ -187,6 +187,13 @@ dell app.css
 
 https://tailwindcss.com/
 
+version 3.4.17
+
+npm install -D tailwindcss@3 postcss autoprefixer
+npx tailwindcss init -p
+
+npm install -D @tailwindcss/forms
+
 .....................................
 npm run dev
 
@@ -194,4 +201,4 @@ npm run dev
 
 
 -------------------------------------------------------------------------
-00 : 02 : 01
+00 : 05 : 17
