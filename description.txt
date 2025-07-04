@@ -210,4 +210,17 @@ rafce - скріпт для створення компонента
 00 : 11 : 53
 
 
+------------------------------------------------------------------------- Lesson 11
+
+https://youtu.be/BZ__FMHcAE0?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
+
+react-router-DOM
+
+npm install react-router-dom
+npm install localforage match-sorter sort-by
+
+-------------------------------------------------------------------------
+00 : 01 : 38
+
+
 

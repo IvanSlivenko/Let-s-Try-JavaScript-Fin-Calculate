@@ -3,3 +3,6 @@ nest.js
 
 vite.dev
 tailwindcss
+react
+
+react-router-dom
