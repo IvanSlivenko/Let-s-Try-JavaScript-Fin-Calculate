@@ -194,11 +194,20 @@ npx tailwindcss init -p
 
 npm install -D @tailwindcss/forms
 
+npm install -D prettier prettier-plugin-tailwindcss
+
+
+
 .....................................
 npm run dev
 
+rafce - скріпт для створення компонента
 
+..............................................
 
 
 -------------------------------------------------------------------------
-00 : 05 : 17
+00 : 11 : 53
+
+
+
