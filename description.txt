@@ -212,6 +212,8 @@ rafce - скріпт для створення компонента
 
 ------------------------------------------------------------------------- Lesson 11
 
+router in React  Router Dom
+
 https://youtu.be/BZ__FMHcAE0?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
 
 react-router-DOM
@@ -219,8 +221,14 @@ react-router-DOM
 npm install react-router-dom
 npm install localforage match-sorter sort-by
 
+RouterProvider
+
+React icons
+
+npm install react-icons --save
+
 -------------------------------------------------------------------------
-00 : 05 : 39
+00 : 17 : 12
 
 
 

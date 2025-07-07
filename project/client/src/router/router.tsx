@@ -4,10 +4,12 @@ import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
 import Transactions from "../pages/Transactions";
 import Categories from "../pages/Categories";
+import Auth from "../pages/Auth";
+import About from "../pages/About";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
@@ -22,6 +24,14 @@ export const router = createBrowserRouter([
       {
         path: 'categories',
         element: <Categories/>,
+      },
+      {
+        path: 'about',
+        element: <About/>,
+      },
+      {
+        path: 'auth',
+        element: <Auth/>,
       },
     ],
   },
