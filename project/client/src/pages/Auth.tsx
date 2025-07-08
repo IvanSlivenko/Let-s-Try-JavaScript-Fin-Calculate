@@ -1,4 +1,5 @@
-import type { FC } from "react"
+import { useState, type FC } from "react"
+const [isLogin, setIsLogin] = useState(false)
 
 const Auth: FC = () => {
   return (
