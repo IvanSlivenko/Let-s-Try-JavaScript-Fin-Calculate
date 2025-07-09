@@ -3,8 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { FaBtc, FaArrowUp, FaSignOutAlt } from "react-icons/fa";
 
 const Header: FC = () => {
-  // const isAuth = false;
-  const isAuth =  true;
+  const isAuth = false;
+  // const isAuth =  true;
 
   const UpIcon = () => {
     return (
