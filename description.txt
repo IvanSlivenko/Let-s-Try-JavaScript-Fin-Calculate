@@ -244,8 +244,16 @@ react-toastify
 npm i react-toastify
 
 
+
+redux toolkit
+npm install @reduxjs/toolkit
+npm install react-redux
+
+
+
+
 ------------------------------------------------------------------------
-00 : 38 : 32
+00 : 56 : 04
 
 
 
