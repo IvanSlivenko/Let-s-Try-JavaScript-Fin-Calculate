@@ -235,9 +235,13 @@ react auterisation
 
 https://youtu.be/-zQrK0mfZFY?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
 
+axios
+
+npm i axios
+
 
 ------------------------------------------------------------------------
-00 : 08 : 48
+00 : 27 : 51
 
 
 
