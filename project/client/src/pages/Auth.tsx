@@ -1,11 +1,15 @@
 import { useState, type FC } from "react";
 import { AuthService } from "../servises/auth.service";
 import { toast } from "react-toastify";
+import { setTokenToLocalStoradge } from "../helpers/localstoradge.helper";
+import { useAppDispatch } from "../store/hooks";
+import { login } from '../store/user/userSlice';
 
 const Auth: FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [isLogin, setIsLogin] = useState<boolean>(false);
+  const dispatch = useAppDispatch()
 
   const registrationHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
@@ -21,9 +25,16 @@ const Auth: FC = () => {
     }
   };
 
-  const loginHandler  = async(e: React.FocusEvent<HTMLFormElement>)=>{
+  const loginHandler  = async(e: React.FormEvent<HTMLFormElement>)=>{
     try {
       e.preventDefault();
+      const data = await AuthService.login({ email, password})
+
+      if(data) {
+        setTokenToLocalStoradge('token', data.token)
+        dispatch(login(data))
+
+      }
       
     } catch (err: any) {
       const error = err.response?.data.message;
