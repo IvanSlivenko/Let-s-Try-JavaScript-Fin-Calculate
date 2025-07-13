@@ -5,6 +5,6 @@ import { getTokenFromLocalStoradge } from "../helpers/localstoradge.helper";
 export const instance = axios.create({
     baseURL: 'http://localhost:3001/api',
     headers: {
-        Authorization: `Bearer`+ getTokenFromLocalStoradge() || '',
+        Authorization: `Bearer `+ getTokenFromLocalStoradge() || '',
     }
 })

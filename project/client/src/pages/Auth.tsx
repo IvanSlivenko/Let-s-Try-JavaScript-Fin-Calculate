@@ -4,12 +4,14 @@ import { toast } from "react-toastify";
 import { setTokenToLocalStoradge } from "../helpers/localstoradge.helper";
 import { useAppDispatch } from "../store/hooks";
 import { login } from '../store/user/userSlice';
+import { useNavigate } from "react-router-dom";
 
 const Auth: FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [isLogin, setIsLogin] = useState<boolean>(false);
   const dispatch = useAppDispatch()
+  const navigate = useNavigate()
 
   const registrationHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
@@ -33,6 +35,10 @@ const Auth: FC = () => {
       if(data) {
         setTokenToLocalStoradge('token', data.token)
         dispatch(login(data))
+        toast.success('You logges in');
+        navigate('/')
+        
+
 
       }
       
