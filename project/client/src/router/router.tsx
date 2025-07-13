@@ -6,10 +6,11 @@ import Transactions from "../pages/Transactions";
 import Categories from "../pages/Categories";
 import Auth from "../pages/Auth";
 import About from "../pages/About";
+import { ProtectedRoute } from "../components/ProtectedRoute";
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
@@ -19,19 +20,31 @@ export const router = createBrowserRouter([
       },
       {
         path: "transactions",
-        element: <Transactions/>,
+        element: (
+          <ProtectedRoute>
+            <Transactions />
+          </ProtectedRoute>
+        ),
       },
       {
-        path: 'categories',
-        element: <Categories/>,
+        path: "categories",
+        element: (
+          <ProtectedRoute>
+            <Categories />
+          </ProtectedRoute>
+        ),
       },
       {
-        path: 'about',
-        element: <About/>,
+        path: "about",
+        element: (
+          <ProtectedRoute>
+            <About />,
+          </ProtectedRoute>
+        ),
       },
       {
-        path: 'auth',
-        element: <Auth/>,
+        path: "auth",
+        element: <Auth />,
       },
     ],
   },

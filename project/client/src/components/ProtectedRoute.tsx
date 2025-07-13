@@ -6,7 +6,7 @@ interface Props {
     children: JSX.Element 
 }
 
-const ProtectedRoute: FC<Props> = ({ children }) => {
+export const ProtectedRoute: FC<Props> = ({ children }) => {
   
   const isAuth = useAuth()  
   return <>
@@ -17,5 +17,3 @@ const ProtectedRoute: FC<Props> = ({ children }) => {
   </>
 }
 
-
-export default ProtectedRoute
