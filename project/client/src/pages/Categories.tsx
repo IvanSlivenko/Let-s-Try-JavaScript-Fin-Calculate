@@ -67,7 +67,9 @@ const Categories: FC = () => {
               {category.title}
               <div className="absolute hidden px-3 left-0 top-0 bottom-0 right-0 rounded-lg bg-black/90 items-center justify-between group-hover:flex">
                 <button onClick={()=>{
+                  setCategoryId(category.id)
                   setVisibleModal(true)
+                  setIsEdit(true)
                 }}>
                   <AiFillEdit />
                 </button>
@@ -101,8 +103,8 @@ const Categories: FC = () => {
       )}
 
       {/* Edit Category Modal */}
-      {visibleModal && (
-        <CategoryModal type="patch" id={} setVisibleModal={setVisibleModal} />
+      {visibleModal && isEdit && (
+        <CategoryModal type="patch" id={categoryId} setVisibleModal={setVisibleModal} />
       )}
     </>
   );
