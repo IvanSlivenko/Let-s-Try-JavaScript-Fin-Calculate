@@ -1,7 +1,25 @@
 import { type FC } from "react";
 import TransactionForm from "../components/TransactionForm";
+import { instance } from "../api/axios.api";
+import type { ICategory, IResponseTransactionLoader } from "../types/types";
+import { useLoaderData } from "react-router-dom";
+
+export const transactionLoader = async () => {
+  const categories = await instance.get<ICategory[]>("/categories");
+  const data = {
+    categories: categories.data,
+
+  }
+  return data
+}
+
+export const transactionAction = async ({ request }: any ) => {
+  const data = {}
+  return data
+}
 
 const Transactions: FC = () => {
+  
   return (
     <>
       <div className="grid grid-cols-3 gap-4 mt-4 items-start">

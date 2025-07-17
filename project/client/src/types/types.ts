@@ -39,3 +39,7 @@ export interface ICategory {
   transactions: []
 
 }
+
+export interface IResponseTransactionLoader {
+  categories: ICategory[]
+}
