@@ -14,8 +14,20 @@ export const transactionLoader = async () => {
 }
 
 export const transactionAction = async ({ request }: any ) => {
-  const data = {}
-  return data
+  switch(request.method) {
+    case "POST": {
+      const formData = await  request.formData()
+      const newTransaction = {
+        title: formData.get('title'),
+        amount: formData.get('amount'),
+        category: formData.get('category'),
+        type: formData.get('type')
+      }
+    }
+    case "DELETE": {
+      
+    }
+  }
 }
 
 const Transactions: FC = () => {
