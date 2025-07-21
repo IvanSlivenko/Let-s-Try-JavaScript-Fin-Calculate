@@ -1,12 +1,13 @@
 import { type FC } from "react";
 import { FaTrash } from "react-icons/fa";
-import { useLoaderData } from "react-router-dom";
+import { Form, useLoaderData } from "react-router-dom";
 import type { IResponseTransactionLoader } from "../types/types";
 import { formatDate } from "../helpers/date.helper";
+import { formatToUAH, formatToUSD } from "../helpers/currency.helper";
 
 const TransactionTable: FC = () => {
-  const {transactions} = useLoaderData() as IResponseTransactionLoader
-   console. log('transactions', transactions)
+  const { transactions } = useLoaderData() as IResponseTransactionLoader;
+  console.log("transactions", transactions);
 
   return (
     <>
@@ -23,22 +24,34 @@ const TransactionTable: FC = () => {
             </tr>
           </thead>
           <tbody>
-            {transactions.map((transaction, idx)=>(
-            <tr key={idx}>
-              <td>{idx + 1}</td>
-              <td>{transaction.title}</td>
-              <td>{transaction.amount}</td>
-              <td>{transaction.category.title}</td>
-              <td>{ formatDate(transaction.updatedAt)}</td>
-              <td>
+            {transactions.map((transaction, idx) => (
+              <tr key={idx}>
+                <td>{idx + 1}</td>
+                <td>{transaction.title}</td>
+                <td
+                  className={
+                    transaction.type === "income"
+                      ? "text-green-500"
+                      : "text-red-500"
+                  }
+                >
+                  {transaction.type === "income"
+                    ? `+ ${formatToUAH.format(transaction.amount)}`
+                    : `- ${formatToUAH.format(transaction.amount)}`}
+                </td>
+                <td>{transaction.category?.title || "Other"}</td>
+                <td>{formatDate(transaction.updatedAt)}</td>
+                <td>
+                  <Form method="delete" action="/transactions">
+                  <input type="hidden" name="id" value={transaction.id} />
                     <button className="btn hover:btn-red ml-auto">
-                  <FaTrash />
-                </button>
-              </td>
-            </tr>
-        
+                      <FaTrash />
+                    </button>
+                  </Form>
+                </td>
+              </tr>
             ))}
-                  </tbody>
+          </tbody>
         </table>
       </div>
     </>
