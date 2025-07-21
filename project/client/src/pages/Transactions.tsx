@@ -34,8 +34,8 @@ export const transactionAction = async ({ request }: any) => {
       const formData = await request.formData();
       const transactionId = formData.get("id");
       await instance.delete(`/transactions/transaction/${transactionId}`);
-      toast.success('Transaction deleted.')
-      return null
+      toast.success("Transaction deleted.");
+      return null;
     }
   }
 };
@@ -76,7 +76,7 @@ const Transactions: FC = () => {
 
       {/* Transactions Table */}
       {/* <h1 className="my-5">Table</h1> */}
-      <TransactionTable />
+      <TransactionTable limit={5} />
     </>
   );
 };
