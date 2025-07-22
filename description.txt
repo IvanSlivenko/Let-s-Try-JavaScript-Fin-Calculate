@@ -283,8 +283,11 @@ https://youtu.be/7tTtLfw-acU?list=PLkUJHNMBzmtQj5qvTCqn0uMXFDG4ENiwf
 react-paginate
 npm i react-paginate
 
+recharts
+npm install recharts
+
 -------------------------------------------------------------------------
-01 : 20 : 20
+01 : 31 : 27
 
 
 

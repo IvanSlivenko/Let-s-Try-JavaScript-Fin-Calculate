@@ -33,10 +33,10 @@ export interface ITransaction {
   amount: number;
   createdAt: string;
   updatedAt: string;
-  title: string,
-  type: string,
+  title: string;
+  type: string;
   id: number;
-  category: ICategory
+  category: ICategory;
 }
 
 export interface ICategory {
@@ -50,6 +50,6 @@ export interface ICategory {
 export interface IResponseTransactionLoader {
   categories: ICategory[];
   transactions: ITransaction[];
+  totalIncome: number;
+  totalExpense: number;
 }
-
-

@@ -23,7 +23,7 @@ const TransactionTable: FC<ITransactionTable> = ({ limit = 3 }) => {
       `/transactions/pagination?page=${page}&limit=${limit}`
     );
 
-    if (transactions || limit) {
+    if (data || limit) {
       setData(response.data);
       setTotalPages(Math.ceil(transactions.length / limit));
     }
@@ -41,10 +41,10 @@ const TransactionTable: FC<ITransactionTable> = ({ limit = 3 }) => {
     <>
       <ReactPaginate
         className="flex gap-3 justify-end mt-4 items-center"
-        activeClassName="bg-green-600 rounded-md "
+        activeClassName="bg-green-600 rounded-sm"
         pageLinkClassName="text-white text-xs py-1 px-2 rounded-sm"
-        previousClassName="text-white py-1 [x-2 bg-slate-800 rounded-sm text-xs"
-        nextClassName="text-white py-1 [x-2 bg-slate-800 rounded-sm text-xs"
+        previousClassName="text-white py-1 [x-2 bg-slate-800 rounded-sm text-xs px-1"
+        nextClassName="text-white py-1 [x-2 bg-slate-800 rounded-sm text-xs px-1"
         disabledClassName="text-white/50 cursor-not-allowed "
         disabledLinkClassName="text-slate-600 cursor-not-allowed"
         pageCount={totalPages}
@@ -66,7 +66,7 @@ const TransactionTable: FC<ITransactionTable> = ({ limit = 3 }) => {
             </tr>
           </thead>
           <tbody>
-            {transactions.map((transaction, idx) => (
+            {data?.map((transaction, idx) => (
               <tr key={idx}>
                 <td>{idx + 1}</td>
                 <td>{transaction.title}</td>
